@@ -1,0 +1,100 @@
+header {
+    text-align: center;
+    margin-top: 20px; /* Garde un léger espace avant "My Profile" */
+    margin-bottom: 0px; /* Réduit à zéro l'espace entre "My Profile" et les cartes */
+}
+
+header h1 {
+    font-size: 36px;
+    color: #ff0000; /* Rouge identique au bouton ADDAN */
+    margin: 0;
+    font-weight: bold;
+    text-transform: none; /* Garde la capitalisation naturelle */
+}
+
+/* Réduction de l'espacement des cartes */
+.spacer {
+    height: 50px; /* Réduit l'espace blanc avant la première carte */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    position: relative;
+    flex-direction: column; /* Pour empiler les cartes verticalement */
+    gap: 20px; /* Espacement entre les cartes */
+}
+
+.spacer {
+    height: 100px; /* Espace blanc avant la première carte augmenté */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease; /* Animation d'agrandissement */
+}
+
+.card:hover {
+    transform: translateY(-50px) scale(1.05); /* Agrandissement léger lors du survol */
+}
+
+.card img {
+    width: 200px;
+    height: 200px; /* Ajuste la hauteur pour que l'image ne soit pas déformée */
+    object-fit: cover; /* Pour garder le ratio sans déformation */
+    border-radius: 15px;
+    margin-right: 30px;
+}
+
+.card:nth-child(2) img {
+    width: 200px; /* Taille de l'image de la deuxième carte ajustée */
+    height: 200px; /* Taille uniforme pour la deuxième image */
+    object-fit: cover; /* Assure que l'image ne sera pas déformée */
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-content h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 18px;
+    color: #666;
+    margin: 0 0 20px;
+    line-height: 1.5;
+}
+
+.card-content .btn {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.card-content .btn:hover {
+    background-color: #cc0000;
+}
